@@ -1,4 +1,6 @@
 import 'package:chattysimple/screens/login.dart';
+import 'package:chattysimple/screens/signup.dart';
+import 'package:chattysimple/screens/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: loginScreen(),
+      home: signupScreen(),
     );
   }
 }

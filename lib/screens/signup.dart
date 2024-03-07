@@ -1,17 +1,18 @@
-import 'package:chattysimple/screens/signup.dart';
+import 'package:chattysimple/screens/login.dart';
 import 'package:chattysimple/styles/textstyle.dart';
 import 'package:chattysimple/widgets/longButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class loginScreen extends StatefulWidget {
-  const loginScreen({super.key});
+class signupScreen extends StatefulWidget {
+  const signupScreen({super.key});
 
   @override
-  State<loginScreen> createState() => _loginScreenState();
+  State<signupScreen> createState() => _loginScreenState();
 }
 
-class _loginScreenState extends State<loginScreen> {
+class _loginScreenState extends State<signupScreen> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -28,6 +29,21 @@ class _loginScreenState extends State<loginScreen> {
             children: [
               TextField(
                 decoration: InputDecoration(
+                  labelText: 'Full Name',
+                  labelStyle: textInputFieldDecoration,
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                  ),
+                ),
+                cursorColor: Colors.black,
+                inputFormatters: [LengthLimitingTextInputFormatter(30)],
+              ),
+              SizedBox(height: h * 0.01),
+              TextField(
+                decoration: InputDecoration(
                   labelText: 'Email',
                   labelStyle: textInputFieldDecoration,
                   border: OutlineInputBorder(
@@ -38,6 +54,7 @@ class _loginScreenState extends State<loginScreen> {
                   ),
                 ),
                 cursorColor: Colors.black,
+                inputFormatters: [LengthLimitingTextInputFormatter(30)],
               ),
               SizedBox(height: h * 0.01),
               TextField(
@@ -53,6 +70,7 @@ class _loginScreenState extends State<loginScreen> {
                   ),
                 ),
                 cursorColor: Colors.black,
+                inputFormatters: [LengthLimitingTextInputFormatter(32)],
               ),
               SizedBox(height: h * 0.02),
               Row(
@@ -69,14 +87,14 @@ class _loginScreenState extends State<loginScreen> {
                       fixedSize: Size(w * .45, h * .06),
                     ),
                     child: const Text(
-                      'LOG IN',
+                      'SIGN UP',
                       style: textStyle,
                     ),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => signupScreen()),
+                        MaterialPageRoute(builder: (context) => loginScreen()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -88,7 +106,7 @@ class _loginScreenState extends State<loginScreen> {
                       fixedSize: Size(w * .45, h * .06),
                     ),
                     child: const Text(
-                      'SIGN UP',
+                      'LOG IN',
                       style: textStyle,
                     ),
                   ),
@@ -96,25 +114,24 @@ class _loginScreenState extends State<loginScreen> {
               ),
               SizedBox(height: h * 0.01),
               Text(
-                'or login with',
+                'or signup with',
                 style: textInputFieldDecoration,
               ),
               SizedBox(height: h * 0.01),
               // for login with google
               longBtn(
-                btnName: "LOGIN WITH GOOGLE",
+                btnName: "SIGNUP WITH GOOGLE",
                 imagePath: "assets/icons/google.png",
                 callBack: () {},
               ),
               SizedBox(height: h * 0.01),
               // for login with facebook
               longBtn(
-                btnName: "LOGIN WITH FACEBOOK",
+                btnName: "SIGNUP WITH FACEBOOK",
                 imagePath: "assets/icons/facebook.png",
                 callBack: () {},
               ),
               SizedBox(height: h * 0.03),
-              Text("Forgotten password?", style: textInputFieldDecoration),
             ],
           ),
         ),
