@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:chattysimple/screens/home.dart';
 import 'package:chattysimple/screens/login.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _splashScreenState extends State<splashScreen> {
     Future.delayed(const Duration(milliseconds: 1000), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => loginScreen()),
+        MaterialPageRoute(builder: (context) => homeNavbar()),
       );
     });
   }
