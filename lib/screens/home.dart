@@ -38,7 +38,7 @@ class homeNavbar extends StatelessWidget {
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.profile_circled),
-        title: ("Settings"),
+        title: ("Profile"),
         activeColorPrimary: CupertinoColors.systemTeal,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
