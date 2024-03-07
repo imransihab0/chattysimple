@@ -27,6 +27,13 @@ class _loginScreenState extends State<loginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text("LOGIN NOW", style: TextStyle(
+                fontFamily: 'DM',
+                fontWeight: FontWeight.bold,
+                fontSize: 32,
+                ),
+              ),
+              SizedBox(height: h * 0.01),
               CustomTextField(placeHolder: "Email", textTimit: 30, isPassword: false),
               SizedBox(height: h * 0.01),
               CustomTextField(placeHolder: "Password", textTimit: 32, isPassword: true),

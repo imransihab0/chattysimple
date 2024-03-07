@@ -28,6 +28,13 @@ class _loginScreenState extends State<signupScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text("CREATE ACCOUNT", style: TextStyle(
+                fontFamily: 'DM',
+                fontWeight: FontWeight.bold,
+                fontSize: 32,
+                ),
+              ),
+              SizedBox(height: h * 0.01),
               CustomTextField(placeHolder: "Full Name", textTimit: 30, isPassword: false),
               SizedBox(height: h * 0.01),
               CustomTextField(placeHolder: "Email", textTimit: 30, isPassword: false),

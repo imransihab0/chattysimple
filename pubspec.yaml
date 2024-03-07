@@ -85,6 +85,13 @@ flutter:
         - asset: assets/fonts/Montserrat-Medium.ttf
         - asset: assets/fonts/Montserrat-Regular.ttf
         - asset: assets/fonts/Montserrat-SemiBold.ttf
+    - family: DM
+      fonts:
+        - asset: assets/fonts/DMSerifDisplay-Italic.ttf
+        - asset: assets/fonts/DMSerifDisplay-Regular.ttf
+    - family: LILITA
+      fonts:
+        - asset: assets/fonts/LilitaOne-Regular.ttf
   #          style: italic
   #   - family: Trajan Pro
   #     fonts:

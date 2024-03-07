@@ -1,4 +1,5 @@
 import 'package:chattysimple/screens/login.dart';
+import 'package:chattysimple/screens/mainPages/profile.dart';
 import 'package:chattysimple/screens/signup.dart';
 import 'package:chattysimple/screens/underConstruction.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,8 +11,8 @@ class homeNavbar extends StatelessWidget {
     return [
       underConstruction(),
       loginScreen(),
-      underConstruction(),
       signupScreen(),
+      profileScreen(),
     ];
   }
 
