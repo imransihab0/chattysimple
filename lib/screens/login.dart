@@ -1,6 +1,7 @@
 import 'package:chattysimple/screens/signup.dart';
 import 'package:chattysimple/styles/textstyle.dart';
 import 'package:chattysimple/widgets/longButton.dart';
+import 'package:chattysimple/widgets/textField.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,34 +27,9 @@ class _loginScreenState extends State<loginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: textInputFieldDecoration,
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(width: 1.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
-                  ),
-                ),
-                cursorColor: Colors.black,
-              ),
+              CustomTextField(placeHolder: "Email", textTimit: 30, isPassword: false),
               SizedBox(height: h * 0.01),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: textInputFieldDecoration,
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(width: 1.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
-                  ),
-                ),
-                cursorColor: Colors.black,
-              ),
+              CustomTextField(placeHolder: "Password", textTimit: 32, isPassword: true),
               SizedBox(height: h * 0.02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

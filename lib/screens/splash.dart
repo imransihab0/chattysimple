@@ -15,7 +15,7 @@ class _SplashScreenState extends State<splashScreen> {
     super.initState();
 
     // Splash this screen for 2 second
-    Future.delayed(const Duration(milliseconds: 1000), () {
+    Future.delayed(const Duration(milliseconds: 1500), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => loginScreen()), // Replace YourNextScreen with the screen you want to navigate to
