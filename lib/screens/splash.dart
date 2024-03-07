@@ -27,16 +27,18 @@ class _SplashScreenState extends State<splashScreen> {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Image(
-              image: AssetImage("assets/icons/splash.png"),
-              height: h * 1,
-              width: w * 0.9,
-            ),
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage("assets/icons/splash.png"),
+                height: h * 1,
+                width: w * 0.9,
+              ),
+            ],
+          ),
         ),
       ),
     );
