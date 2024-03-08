@@ -1,4 +1,5 @@
 import 'package:chattysimple/screens/login.dart';
+import 'package:chattysimple/screens/mainPages/chat.dart';
 import 'package:chattysimple/screens/mainPages/profile.dart';
 import 'package:chattysimple/screens/signup.dart';
 import 'package:chattysimple/screens/underConstruction.dart';
@@ -10,7 +11,7 @@ class homeNavbar extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       underConstruction(),
-      loginScreen(),
+      chatScreen(),
       signupScreen(),
       profileScreen(),
     ];

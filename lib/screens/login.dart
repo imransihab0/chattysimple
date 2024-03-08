@@ -1,4 +1,5 @@
 import 'package:chattysimple/screens/signup.dart';
+import 'package:chattysimple/screens/underConstruction.dart';
 import 'package:chattysimple/styles/textstyle.dart';
 import 'package:chattysimple/widgets/longButton.dart';
 import 'package:chattysimple/widgets/textField.dart';
@@ -97,7 +98,11 @@ class _loginScreenState extends State<loginScreen> {
                 callBack: () {},
               ),
               SizedBox(height: h * 0.03),
-              Text("Forgotten password?", style: textInputFieldDecoration),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => underConstruction()));
+                },
+                  child: Text("Forgotten password?", style: textInputFieldDecoration)),
             ],
           ),
         ),
